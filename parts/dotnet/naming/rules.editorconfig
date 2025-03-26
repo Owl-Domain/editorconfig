@@ -1,0 +1,72 @@
+# C# Naming rules
+[*.cs]
+
+## Namespaces
+dotnet_naming_rule.namespace_should_be_pascalcase.severity = warning
+dotnet_naming_rule.namespace_should_be_pascalcase.symbols = namespace
+dotnet_naming_rule.namespace_should_be_pascalcase.style = pascalcase
+
+## Classes
+dotnet_naming_rule.class_should_be_pascalcase.severity = warning
+dotnet_naming_rule.class_should_be_pascalcase.symbols = class
+dotnet_naming_rule.class_should_be_pascalcase.style = pascalcase
+
+## Structs
+dotnet_naming_rule.struct_should_be_pascalcase.severity = warning
+dotnet_naming_rule.struct_should_be_pascalcase.symbols = struct
+dotnet_naming_rule.struct_should_be_pascalcase.style = pascalcase
+
+## Interfaces
+dotnet_naming_rule.interface_should_be_ipascalcase.severity = warning
+dotnet_naming_rule.interface_should_be_ipascalcase.symbols = interface
+dotnet_naming_rule.interface_should_be_ipascalcase.style = ipascalcase
+
+## Enums
+dotnet_naming_rule.enum_should_be_pascalcase.severity = warning
+dotnet_naming_rule.enum_should_be_pascalcase.symbols = enum
+dotnet_naming_rule.enum_should_be_pascalcase.style = pascalcase
+
+## Delegates
+dotnet_naming_rule.delegate_should_be_pascalcase.severity = warning
+dotnet_naming_rule.delegate_should_be_pascalcase.symbols = delegate
+dotnet_naming_rule.delegate_should_be_pascalcase.style = pascalcase
+
+## Constants
+dotnet_naming_rule.constant_should_be_pascalcase.severity = warning
+dotnet_naming_rule.constant_should_be_pascalcase.symbols = constant
+dotnet_naming_rule.constant_should_be_pascalcase.style = pascalcase
+
+## Private fields
+dotnet_naming_rule.private_field_should_be__camelcase.severity = warning
+dotnet_naming_rule.private_field_should_be__camelcase.symbols = private_field
+dotnet_naming_rule.private_field_should_be__camelcase.style = _camelcase
+
+## Static fields
+dotnet_naming_rule.static_field_should_be_pascalcase.severity = warning
+dotnet_naming_rule.static_field_should_be_pascalcase.symbols = static_field
+dotnet_naming_rule.static_field_should_be_pascalcase.style = pascalcase
+
+## Async methods / Functions
+dotnet_naming_rule.async_method_should_be_pascalcaseasync.severity = warning
+dotnet_naming_rule.async_method_should_be_pascalcaseasync.symbols = async_method
+dotnet_naming_rule.async_method_should_be_pascalcaseasync.style = pascalcaseasync
+
+## Generic parameters
+dotnet_naming_rule.generic_parameter_should_be_tpascalcase.severity = warning
+dotnet_naming_rule.generic_parameter_should_be_tpascalcase.symbols = generic_parameter
+dotnet_naming_rule.generic_parameter_should_be_tpascalcase.style = tpascalcase
+
+## Parameters
+dotnet_naming_rule.parameter_should_be_camelcase.severity = warning
+dotnet_naming_rule.parameter_should_be_camelcase.symbols = parameter
+dotnet_naming_rule.parameter_should_be_camelcase.style = camelcase
+
+## Local variables
+dotnet_naming_rule.variable_should_be_camelcase.severity = warning
+dotnet_naming_rule.variable_should_be_camelcase.symbols = variable
+dotnet_naming_rule.variable_should_be_camelcase.style = camelcase
+
+## Non-private members (field, property, event, method)
+dotnet_naming_rule.non_private_member_should_be_pascalcase.severity = warning
+dotnet_naming_rule.non_private_member_should_be_pascalcase.symbols = non_private_member
+dotnet_naming_rule.non_private_member_should_be_pascalcase.style = pascalcase
