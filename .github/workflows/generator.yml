@@ -36,15 +36,21 @@ jobs:
       working-directory: src/Generator/bin/Debug/net9.0
       run: ./Generator
 
+    - name: Ensure .editorconfig file exists so that staging without changes doesn't fail
+      run: touch .editorconfig
+
+    - name: Stage the generated .editorconfig file
+      run: git add .editorconfig
+
     - name: Check if the generated .editorconfig file actually changed
       id: check_changes
       run: |
-        if [[ -n "$(git diff --exit-code .editorconfig)" ]]; then
-          echo "The .editorconfig file has changed."
-          echo "::set-output name=has_changes::true"
-        else
+        if [[ -z $(git status -s) ]]; then
           echo "The .editorconfig file has not changed, git commit will be skipped."
-          echo "::set-output name=has_changes::false"
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "The .editorconfig file has changed."
+          echo "has_changes=true" >> $GITHUB_OUTPUT
         fi
 
     - name: Configure git information
@@ -52,10 +58,6 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-    - name: Stage the generated .editorconfig file
-      if: steps.check_changes.outputs.has_changes == 'true'
-      run: git add .editorconfig
 
     - name: Create the commit with the new .editorconfig file
       if: steps.check_changes.outputs.has_changes == 'true'
