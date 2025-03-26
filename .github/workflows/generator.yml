@@ -33,8 +33,8 @@ jobs:
       run: dotnet build src/Generator
 
     - name: Run the generator project
-      run: dotnet run src/Generator
-
+      working-directory: src/Generator/bin/Debug/net9.0
+      run: ./Generator
 
     - name: Check if the generated .editorconfig file actually changed
       id: check_changes
