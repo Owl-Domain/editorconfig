@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "local", "local", "{0070A8F0-CE9E-4531-B51D-83B982B129EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "local\Playground\Playground.csproj", "{471F79A4-4A1D-4C74-BC17-08FDF7BCAA9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "misc", "misc", "{C841F5C2-8F30-5BE9-ECA6-260644CF6F9F}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitattributes = ..\.gitattributes
+		..\.gitignore = ..\.gitignore
+		..\playground_fix.sh = ..\playground_fix.sh
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{471F79A4-4A1D-4C74-BC17-08FDF7BCAA9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{471F79A4-4A1D-4C74-BC17-08FDF7BCAA9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{471F79A4-4A1D-4C74-BC17-08FDF7BCAA9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{471F79A4-4A1D-4C74-BC17-08FDF7BCAA9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{471F79A4-4A1D-4C74-BC17-08FDF7BCAA9F} = {0070A8F0-CE9E-4531-B51D-83B982B129EC}
+	EndGlobalSection
+EndGlobal
