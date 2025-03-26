@@ -168,3 +168,8 @@ dotnet_naming_style.camelcase.capitalization = camel_case
 ## _camelCase
 dotnet_naming_style._camelcase.required_prefix = _
 dotnet_naming_style._camelcase.capitalization = camel_case
+
+# YAML files | source: yml.editorconfig
+[*.yml]
+indent_style = space
+indent_size = 2
