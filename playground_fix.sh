@@ -10,5 +10,5 @@ if [ -e 'src/local/Playground/Playground.csproj' ]; then
    exit
 fi
 
-dotnet console -o src/local/Playground > /dev/null 2> /dev/null
+dotnet new console -o src/local/Playground > /dev/null 2> /dev/null
 echo "Playground project created, reload the solution if you already opened it."
