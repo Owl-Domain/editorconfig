@@ -3,8 +3,8 @@
 class Program
 {
 	#region Fields
-	private static readonly string PartsDirectory = Path.GetFullPath("../../../../../parts");
-	private static readonly string BuildDirectory = Path.GetFullPath("../../../../..");
+	private static readonly string PartsDirectory = Path.GetFullPath("../../parts");
+	private static readonly string BuildDirectory = Path.GetFullPath("../..");
 	private static readonly string RootFilePath = Path.Combine(PartsDirectory, "root.editorconfig");
 	private static readonly string CommonFilePath = Path.Combine(PartsDirectory, "common.editorconfig");
 	#endregion

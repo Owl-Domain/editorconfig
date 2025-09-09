@@ -1,0 +1,71 @@
+name: build
+
+permissions:
+  contents: write
+  pull-requests: write
+
+on:
+  push:
+    branches: master
+    paths:
+      - 'parts/**.editorconfig' # React to parts being modified
+      - '.github/workflows/build.yml' # React to the workflow file itself changing
+
+  workflow_dispatch: # Allow manual runs for when the generator / output format is updated
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build the merged .editorconfig file
+
+    env:
+      DOTNET_NOLOGO: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+    steps:
+      - name: Install the .NET workflow
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Build the generator project
+        run: dotnet build src/Generator
+
+      - name: Run the generator project
+        working-directory: src/Generator
+        run: dotnet run
+
+      - name: Ensure .editorconfig file exists so that staging without changes doesn't fail
+        run: touch .editorconfig
+
+      - name: Stage the generated .editorconfig file
+        run: git add .editorconfig
+
+      - name: Check if the generated .editorconfig file actually changed
+        id: check_changes
+        run: |
+          if [[ -z $(git status -s) ]]; then
+            echo "The .editorconfig file has not changed, git commit will be skipped."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "The .editorconfig file has changed."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Pull request the new .editorconfig file
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: pull_request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: .editorconfig
+
+          commit-message: Update the generated .editorconfig file.
+          sign-commits: true
+
+          branch: automatic-editorconfig-update
+          title: "[Auto] Update the generated .editorconfig file."
+          body: "This PR updates the `.editorconfig` file generated through the [build](https://github.com/Owl-Domain/editorconfig/actions/workflows/build.yml) Github action workflow."
+          reviewers: nightowl286
