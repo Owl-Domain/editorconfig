@@ -11,7 +11,7 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
-    name: Notify the OwlDomain repositories about the .editorconfig file being changed
+    name: Notify
 
     strategy:
       matrix:
@@ -30,7 +30,7 @@ jobs:
         ]
 
     steps:
-      - name: Notify the OwlDomain/${{ matrix.repository }} repository
+      - name: Notify the owl-domain/${{ matrix.repository }} repository
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.DISPATCH_PAT }}
