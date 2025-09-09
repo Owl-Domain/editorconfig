@@ -1,0 +1,49 @@
+name: pull_editorconfig
+
+permissions:
+  pull-requests: write
+
+on:
+  workflow_call: # Required for reusable workflows.
+  workflow_dispatch: # Allow manual runs
+
+jobs:
+  pull_editorconfig:
+    runs-on: ubuntu-latest
+    name: Pull the latest .editorconfig file
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Pull the latest .editorconfig file
+        run: wget --output-document .editorconfig 'https://raw.githubusercontent.com/Owl-Domain/editorconfig/refs/heads/master/.editorconfig'
+
+      - name: Stage the pulled .editorconfig file
+        run: git add .editorconfig
+
+      - name: Check if the pulled .editorconfig file actually changed
+        id: check_changes
+        run: |
+          if [[ -z $(git status -s) ]]; then
+            echo "The .editorconfig file has not changed, git commit will be skipped."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "The .editorconfig file has changed."
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Pull request the new .editorconfig file
+        if: steps.check_changes.outputs.has_changes == 'true'
+        id: pull_request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: .editorconfig
+
+          commit-message: Update the .editorconfig file to the latest version.
+          sign-commits: true
+
+          branch: automatic-editorconfig-update
+          title: "[Auto] Update the .editorconfig file to the latest version."
+          body: "This PR updates the `.editorconfig` file to the latest version from the [OwlDomain/editorconfig](https://github.com/Owl-Domain/editorconfig) repository."
+          reviewers: nightowl286
