@@ -1,7 +1,6 @@
 name: build
 
 permissions:
-  contents: write
   pull-requests: write
 
 on:
@@ -9,7 +8,6 @@ on:
     branches: master
     paths:
       - 'parts/**.editorconfig' # React to parts being modified
-      - '.github/workflows/build.yml' # React to the workflow file itself changing
 
   workflow_dispatch: # Allow manual runs for when the generator / output format is updated
 
@@ -36,7 +34,7 @@ jobs:
 
       - name: Run the generator project
         working-directory: src/Generator
-        run: dotnet run
+        run: dotnet run --no-build
 
       - name: Ensure .editorconfig file exists so that staging without changes doesn't fail
         run: touch .editorconfig
