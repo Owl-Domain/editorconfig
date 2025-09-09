@@ -1,6 +1,7 @@
 name: pull_editorconfig
 
 permissions:
+  contents: write
   pull-requests: write
 
 on:
