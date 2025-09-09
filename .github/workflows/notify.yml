@@ -1,0 +1,38 @@
+name: notify
+
+on:
+  push:
+    branches: master
+    paths:
+      - '.editorconfig' # React to the .editorconfig file being modified
+
+  workflow_dispatch: # Allow manual runs for when the workflow is changed enough to need to be dispatched
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    name: Notify the OwlDomain repositories about the .editorconfig file being changed
+
+    strategy:
+      matrix:
+        repository: [
+          Polyease,
+          Common,
+          Testing,
+
+          Documentation,
+          Sain,
+          Media,
+          Console,
+          # CommandLine, # No longer needs to be updated, project is almost archived.
+
+          Owldoc
+        ]
+
+    steps:
+      - name: Notify the OwlDomain/${{ matrix.repository }} repository
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.DISPATCH_PAT }}
+          repository: owl-domain/${{ matrix.repository }}
+          event-type: editorconfig-update
