@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Pull the latest .editorconfig file
-        run: wget --output-document .editorconfig 'https://raw.githubusercontent.com/Owl-Domain/editorconfig/refs/heads/master/.editorconfig'
+        run: wget --output-document .editorconfig 'https://raw.githubusercontent.com/Owl-Domain/editorconfig/refs/heads/main/.editorconfig'
 
       - name: Stage the pulled .editorconfig file
         run: git add .editorconfig

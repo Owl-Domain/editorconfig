@@ -5,7 +5,7 @@ permissions:
 
 on:
   push:
-    branches: master
+    branches: main
     paths:
       - 'parts/**.editorconfig' # React to parts being modified
 
