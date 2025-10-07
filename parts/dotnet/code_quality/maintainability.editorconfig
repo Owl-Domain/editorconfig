@@ -1,0 +1,18 @@
+# .NET code quality (maintainability) rules
+[*.cs]
+
+## Use nameof in place of string
+dotnet_code_quality.CA1507.severity = warning
+
+## Avoid dead conditional code
+dotnet_code_quality.CA1508.severity = suggestion
+
+## Avoid redundant length argument
+dotnet_code_quality.CA1514.severity = warning
+
+## Consider making public types internal
+dotnet_code_quality.CA1515.severity = warning
+dotnet_code_quality.CA1515.output_kind = ConsoleApplication, WindowsApplication
+
+## Use cross-platform intrinsics
+dotnet_code_quality.CA1516.severity = warning
