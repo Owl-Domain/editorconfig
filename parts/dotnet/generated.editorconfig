@@ -1,0 +1,3 @@
+# Ignore generated .NET files
+[*.{g, generated}.cs]
+generated_code = true
