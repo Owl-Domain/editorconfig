@@ -1,0 +1,5 @@
+# .NET code quality (documentation) rules
+[*.cs]
+
+## Avoid using cref tags with a prefix
+dotnet_code_quality.CA1200.severity = warning
