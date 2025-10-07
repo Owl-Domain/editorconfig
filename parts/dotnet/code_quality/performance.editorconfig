@@ -1,0 +1,131 @@
+# .NET code quality (performance) rules
+[*.cs]
+
+## Avoid unsealed attributes
+dotnet_code_quality.CA1813.severity = warning
+
+## Override equals and operator equals on value types
+dotnet_code_quality.CA1815.severity = warning
+
+## Test for empty strings using string length
+dotnet_code_quality.CA1820.severity = warning
+
+## Avoid unused private fields
+dotnet_code_quality.CA1823.severity = suggestion
+
+## Avoid zero-length array allocations
+dotnet_code_quality.CA1825.severity = warning
+
+## Use property instead of Linq Enumerable method
+dotnet_code_quality.CA1826.severity = warning
+
+## Do not use Count()/LongCount() when Any() can be used
+dotnet_code_quality.CA1827.severity = warning
+
+## Do not use CountAsync()/LongCountAsync() when AnyAsync() can be used
+dotnet_code_quality.CA1828.severity = warning
+
+## Use Length/Count property instead of Enumerable.Count method
+dotnet_code_quality.CA1829.severity = warning
+
+## Prefer strongly-typed Append and Insert method overloads on StringBuilder
+dotnet_code_quality.CA1830.severity = warning
+
+## Use AsSpan instead of Range-based indexers for string when appropriate
+dotnet_code_quality.CA1831.severity = warning
+
+## Use AsSpan or AsMemory instead of Range-based indexers for getting ReadOnlySpan or ReadOnlyMemory portion of an array
+dotnet_code_quality.CA1832.severity = warning
+
+## Use AsSpan or AsMemory instead of Range-based indexers for getting Span or Memory portion of an array
+dotnet_code_quality.CA1833.severity = warning
+
+## Use StringBuilder.Append(char) for single character strings
+dotnet_code_quality.CA1834.severity = suggestion
+
+## Prefer the memory-based overloads of ReadAsync/WriteAsync methods in stream-based classes
+dotnet_code_quality.CA1835.severity = warning
+
+## Prefer IsEmpty over Count when available
+dotnet_code_quality.CA1836.severity = warning
+
+## Use Environment.ProcessId instead of Process.GetCurrentProcess().Id
+dotnet_code_quality.CA1837.severity = warning
+
+## Avoid StringBuilder parameters for P/Invokes
+dotnet_code_quality.CA1838.severity = suggestion
+
+## Use Environment.ProcessPath instead of Process.GetCurrentProcess().MainModule.FileName
+dotnet_code_quality.CA1839.severity = warning
+
+## Use Environment.CurrentManagedThreadId instead of Thread.CurrentThread.ManagedThreadId
+dotnet_code_quality.CA1840.severity = warning
+
+## Prefer Dictionary Contains methods
+dotnet_code_quality.CA1841.severity = warning
+
+## Do not use 'WhenAll' with a single task
+dotnet_code_quality.CA1842.severity = suggestion
+
+## Do not use 'WaitAll' with a single task
+dotnet_code_quality.CA1843.severity = suggestion
+
+## Provide memory-based overrides of async methods when subclassing 'Stream'
+dotnet_code_quality.CA1844.severity = warning
+
+## Prefer AsSpan over Substring
+dotnet_code_quality.CA1846.severity = warning
+
+## Use String.Contains(char) instead of String.Contains(string) with single characters
+dotnet_code_quality.CA1847.severity = suggestion
+
+## Call async methods when in an async method
+dotnet_code_quality.CA1849.severity = warning
+
+## Prefer static HashData method over ComputeHash
+dotnet_code_quality.CA1850.severity = warning
+
+## Seal internal types
+dotnet_code_quality.CA1852.severity = suggestion
+
+## Unnecessary call to 'Dictionary.ContainsKey(key)'
+dotnet_code_quality.CA1853.severity = warning
+
+## Prefer the IDictionary.TryGetValue(TKey, out TValue) method
+dotnet_code_quality.CA1854.severity = warning
+
+## Use Span<T>.Clear() instead of Span<T>.Fill()
+dotnet_code_quality.CA1855.severity = warning
+
+## Incorrect usage of ConstantExpected attribute
+dotnet_code_quality.CA1856.severity = error
+
+## The parameter expects a constant for optimal performance
+dotnet_code_quality.CA1857.severity = suggestion
+
+## Use StartsWith instead of IndexOf
+dotnet_code_quality.CA1858.severity = warning
+
+## Avoid using 'Enumerable.Any()' extension method
+dotnet_code_quality.CA1860.severity = warning
+
+## Use the 'StringComparison' method overloads to perform case-insensitive string comparisons
+dotnet_code_quality.CA1862.severity = warning
+
+## Prefer the 'IDictionary.TryAdd(TKey, TValue)' method
+dotnet_code_quality.CA1864.severity = warning
+
+## Avoid using 'Enumerable.Any()' extension method
+dotnet_code_quality.CA1860.severity = warning
+
+## Use 'string.Method(char)' instead of 'string.Method(string)' for string with single char
+dotnet_code_quality.CA1865.severity = suggestion
+
+## Unnecessary call to 'Contains' for sets
+dotnet_code_quality.CA1868.severity = warning
+
+## Do not pass a nullable struct to 'ArgumentNullException.ThrowIfNull'
+dotnet_code_quality.CA1871.severity = warning
+
+## Prefer 'Convert.ToHexString' and 'Convert.ToHexStringLower' over call chains based on 'BitConverter.ToString'
+dotnet_code_quality.CA1872.severity = warning
