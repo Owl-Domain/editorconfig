@@ -1,0 +1,116 @@
+# .NET code quality (design) rules
+[*.cs]
+
+## Use generic event handler instances
+dotnet_code_quality.CA1003.severity = suggestion
+
+## (Flag) Enums should have zero value | None is allowed by default
+dotnet_code_quality.CA1008.severity = warning
+dotnet_code_quality.CA1008.additional_enum_none_names = Never|Nothing|Default|Empty|Off
+
+## Collections should implement generic interface | Lists and dictionaries
+dotnet_code_quality.CA1010.severity = warning
+dotnet_code_quality.CA1010.api_surface = all
+dotnet_code_quality.CA1010.additional_required_generic_interfaces = T:System.Collections.IDictionary->T:System.Collections.Generic.IDictionary`2
+
+## Abstract types should not have public constructors
+dotnet_code_quality.CA1012.severity = warning
+dotnet_code_quality.CA1012.api_surface = all
+
+## Mark attributes with AttributeUsageAttribute
+dotnet_code_quality.CA1018.severity = warning
+dotnet_code_quality.CA1018.api_surface = all
+
+## Avoid out parameters | this does not affect the Try* pattern
+dotnet_code_quality.CA1021.severity = suggestion
+dotnet_code_quality.CA1021.api_surface = all
+
+## Use properties where appropriate
+dotnet_code_quality.CA1024.severity = suggestion
+dotnet_code_quality.CA1024.api_surface = all
+
+## Mark enums with FlagsAttribute
+dotnet_code_quality.CA1027.severity = warning
+dotnet_code_quality.CA1027.api_surface = all
+
+## Enum storage should be Int32
+dotnet_code_quality.CA1028.severity = none
+dotnet_code_quality.CA1028.api_surface = all
+
+## Implement standard exception constructors
+dotnet_code_quality.CA1032.severity = warning
+dotnet_code_quality.CA1032.api_surface = all
+
+## Override methods on comparable types
+dotnet_code_quality.CA1036.severity = warning
+dotnet_code_quality.CA1036.api_surface = public, internal
+
+## Provide ObsoleteAttribute message
+dotnet_code_quality.CA1041.severity = warning
+dotnet_code_quality.CA1041.api_surface = all
+
+## Properties should not be write only
+dotnet_code_quality.CA1044.severity = warning
+dotnet_code_quality.CA1044.api_surface = all
+
+## Do not declare protected members in sealed types
+dotnet_code_quality.CA1047.severity = warning
+dotnet_code_quality.CA1047.api_surface = all
+
+## Declare types in namespaces
+dotnet_code_quality.CA1050.severity = warning
+dotnet_code_quality.CA1050.api_surface = all
+
+## Do not declare visible instance fields
+dotnet_code_quality.CA1051.severity = warning
+dotnet_code_quality.CA1051.exclude_structs = true
+
+## Static holder types should be Static
+dotnet_code_quality.CA1052.severity = warning
+dotnet_code_quality.CA1052.api_surface = all
+
+## URI parameters should not be strings
+dotnet_code_quality.CA1054.severity = suggestion
+dotnet_code_quality.CA1054.api_surface = all
+
+## URI return values should not be strings
+dotnet_code_quality.CA1055.severity = suggestion
+dotnet_code_quality.CA1055.api_surface = all
+
+## URI properties should not be strings
+dotnet_code_quality.CA1056.severity = suggestion
+dotnet_code_quality.CA1056.api_surface = all
+
+## Types should not extend certain base types
+dotnet_code_quality.CA1058.severity = warning
+
+## Do not hide base class methods
+dotnet_code_quality.CA1061.severity = warning
+dotnet_code_quality.CA1061.api_surface = all
+
+## Exceptions should be public
+dotnet_code_quality.CA1064.severity = warning
+
+## Do not raise exceptions in unexpected locations
+dotnet_code_quality.CA1065.severity = warning
+dotnet_code_quality.CA1065.api_surface = all
+
+## Implement IEquatable when overriding Equals
+dotnet_code_quality.CA1066.severity = warning
+dotnet_code_quality.CA1066.api_surface = public, internal
+
+## Override Equals when implementing IEquatable
+dotnet_code_quality.CA1067.severity = warning
+dotnet_code_quality.CA1067.api_surface = public, internal
+
+## CancellationToken parameters must come last
+dotnet_code_quality.CA1068.severity = suggestion
+dotnet_code_quality.CA1068.api_surface = all
+
+## Enums should not have duplicate values
+dotnet_code_quality.CA1069.severity = warning
+dotnet_code_quality.CA1069.api_surface = all
+
+## Do not declare event fields as virtual
+dotnet_code_quality.CA1070.severity = warning
+dotnet_code_quality.CA1070.api_surface = all
