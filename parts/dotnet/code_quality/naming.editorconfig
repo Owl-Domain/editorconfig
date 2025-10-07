@@ -1,0 +1,43 @@
+# .NET code quality (naming pattern) rules
+[*.cs]
+
+## Do not name enum values 'Reserved'
+dotnet_code_quality.CA1700.severity = warning
+dotnet_code_quality.CA1700.api_surface = all
+
+## Identifiers should differ by more than case
+dotnet_code_quality.CA1708.severity = warning
+dotnet_code_quality.CA1708.api_surface = public, internal
+
+## Identifiers should have correct suffix
+dotnet_code_quality.CA1710.severity = silent
+
+## Identifiers should not have incorrect suffix
+dotnet_code_quality.CA1711.severity = warning
+dotnet_code_quality.CA1711.allowed_suffixes = Flag|Flags
+
+## Do not prefix enum values with type name
+dotnet_code_quality.CA1712.severity = silent
+dotnet_code_quality.CA1712.api_surface = all
+
+## Events should not have before or after prefix
+dotnet_code_quality.CA1713.severity = silent
+dotnet_code_quality.CA1713.api_surface = all
+
+## Identifiers should have correct prefix
+dotnet_code_quality.CA1715.severity = warning
+dotnet_code_quality.CA1715.api_surface = all
+
+## Identifiers should not contain type names
+dotnet_code_quality.CA1720.severity = warning
+dotnet_code_quality.CA1720.api_surface = all
+
+## Property names should not match get methods
+dotnet_code_quality.CA1721.severity = warning
+
+## Type names should not match namespaces
+dotnet_code_quality.CA1724.severity = suggestion
+
+## Parameter names should match base declaration
+dotnet_code_quality.CA1725.severity = warning
+dotnet_code_quality.CA1725.api_surface = all
