@@ -1,82 +1,82 @@
-# .NET code quality (usage) rules
+## .NET code quality (usage) rules
 [*.cs]
 
-## Review unused parameters
+### Review unused parameters
 dotnet_code_quality.CA1801.severity = suggestion
 
-## Call GC.SuppressFinalize correctly
+### Call GC.SuppressFinalize correctly
 dotnet_code_quality.CA1816.severity = suggestion
 
-## Rethrow to preserve stack details
+### Rethrow to preserve stack details
 dotnet_code_quality.CA2200.severity = warning
 
-## Do not mark enums with FlagsAttribute
+### Do not mark enums with FlagsAttribute
 dotnet_code_quality.CA2217.severity = warning
 
-## Override GetHashCode on overriding Equals
+### Override GetHashCode on overriding Equals
 dotnet_code_quality.CA2218.severity = warning
 
-## Do not raise exceptions in exception clauses
+### Do not raise exceptions in exception clauses
 dotnet_code_quality.CA2219.severity = warning
 
-## Override Equals on overloading operator equals
+### Override Equals on overloading operator equals
 dotnet_code_quality.CA2224.severity = warning
 
-## Operators should have symmetrical overloads
+### Operators should have symmetrical overloads
 dotnet_code_quality.CA2226.severity = warning
 
-## Overload operator equals on overriding ValueType.Equals
+### Overload operator equals on overriding ValueType.Equals
 dotnet_code_quality.CA2231.severity = warning
 
-## Pass System.Uri objects instead of strings
+### Pass System.Uri objects instead of strings
 dotnet_code_quality.CA2234.severity = suggestion
 dotnet_code_quality.CA2234.api_surface = all
 
-## Provide correct arguments to formatting methods
+### Provide correct arguments to formatting methods
 dotnet_code_quality.CA2241.severity = warning
 dotnet_code_quality.CA2241.try_determine_additional_string_formatting_methods_automatically = true
 
-## Test for NaN correctly
+### Test for NaN correctly
 dotnet_code_quality.CA2242.severity = warning
 
-## Attribute string literals should parse correctly
+### Attribute string literals should parse correctly
 dotnet_code_quality.CA2243.severity = suggestion
 
-## Do not duplicate indexed element initializations
+### Do not duplicate indexed element initializations
 dotnet_code_quality.CA2244.severity = warning
 
-## Do not assign a property to itself
+### Do not assign a property to itself
 dotnet_code_quality.CA2245.severity = warning
 
-## Argument passed to TaskCompletionSource constructor should be TaskCreationOptions enum instead of TaskContinuationOptions enum
+### Argument passed to TaskCompletionSource constructor should be TaskCreationOptions enum instead of TaskContinuationOptions enum
 dotnet_code_quality.CA2247.severity = warning
 
-## Provide correct enum argument to Enum.HasFlag
+### Provide correct enum argument to Enum.HasFlag
 dotnet_code_quality.CA2248.severity = warning
 
-## Consider using String.Contains instead of String.IndexOf
+### Consider using String.Contains instead of String.IndexOf
 dotnet_code_quality.CA2249.severity = warning
 
-## Use ThrowIfCancellationRequested
+### Use ThrowIfCancellationRequested
 dotnet_code_quality.CA2250.severity = warning
 
-## Use String.Equals over String.Compare
+### Use String.Equals over String.Compare
 dotnet_code_quality.CA2251.severity = warning
 
-## Ensure ThreadStatic is only used with static fields
+### Ensure ThreadStatic is only used with static fields
 dotnet_code_quality.CA2259.severity = warning
 
-## Implement generic math interfaces correctly
+### Implement generic math interfaces correctly
 dotnet_code_quality.CA2260.severity = error
 
-## Do not use ConfigureAwaitOptions.SuppressThrowing with Task<TResult>
+### Do not use ConfigureAwaitOptions.SuppressThrowing with Task<TResult>
 dotnet_code_quality.CA2261.severity = warning
 
-## Prefer generic overload when type is known
+### Prefer generic overload when type is known
 dotnet_code_quality.CA2263.severity = warning
 
-## Do not pass a non-nullable value to 'ArgumentNullException.ThrowIfNull'
+### Do not pass a non-nullable value to 'ArgumentNullException.ThrowIfNull'
 dotnet_code_quality.CA2264.severity = warning
 
-## Do not compare Span<T> to null or default
+### Do not compare Span<T> to null or default
 dotnet_code_quality.CA2265.severity = warning

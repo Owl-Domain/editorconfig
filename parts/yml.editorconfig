@@ -1,4 +1,4 @@
-# YAML files
+## YAML files
 [*.yml]
 indent_style = space
 indent_size = 2
