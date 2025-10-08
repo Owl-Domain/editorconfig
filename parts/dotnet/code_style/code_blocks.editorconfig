@@ -1,0 +1,30 @@
+## .NET code style (code blocks) preferences
+[*.cs]
+
+### Add braces (IDE0011)
+csharp_prefer_braces = when_multiline
+csharp_prefer_braces.severity = warning
+
+### Use simple 'using' statement (IDE0063)
+csharp_prefer_simple_using_statement = false
+csharp_prefer_simple_using_statement.severity = suggestion
+
+### Namespace declaration preferences (IDE0160 and IDE0161)
+csharp_style_namespace_declarations = file_scoped
+csharp_style_namespace_declarations.severity = warning
+
+### Remove unnecessary lambda expression (IDE0200)
+csharp_style_prefer_method_group_conversion = true
+csharp_style_prefer_method_group_conversion.severity = warning
+
+### Convert to top-level statements (IDE0210) | Convert to 'Program.Main' style program (IDE0211)
+csharp_style_prefer_top_level_statements = false
+csharp_style_prefer_top_level_statements.severity = warning
+
+### Use primary constructor (IDE0290)
+csharp_style_prefer_primary_constructors = true
+csharp_style_prefer_primary_constructors.severity = warning
+
+### Prefer 'System.Threading.Lock' (IDE0330)
+csharp_prefer_system_threading_lock = true
+csharp_prefer_system_threading_lock.severity = warning
