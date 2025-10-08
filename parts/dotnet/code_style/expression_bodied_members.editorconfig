@@ -1,0 +1,34 @@
+## .NET code style (expression bodied members) preferences
+[*.cs]
+
+### Use expression body for constructors (IDE0021)
+csharp_style_expression_bodied_constructors = false
+csharp_style_expression_bodied_constructors.severity = warning
+
+### Use expression body for methods (IDE0022)
+csharp_style_expression_bodied_methods = when_on_single_line
+csharp_style_expression_bodied_methods.severity = suggestion
+
+### Use expression body for operators (IDE0023 and IDE0024)
+csharp_style_expression_bodied_operators = when_on_single_line
+csharp_style_expression_bodied_operators.severity = suggestion
+
+### Use expression body for properties (IDE0025)
+csharp_style_expression_bodied_properties = when_on_single_line
+csharp_style_expression_bodied_properties.severity = warning
+
+### Use expression body for indexers (IDE0026)
+csharp_style_expression_bodied_indexers = when_on_single_line
+csharp_style_expression_bodied_indexers.severity = warning
+
+### Use expression body for accessors (IDE0027)
+csharp_style_expression_bodied_accessors = when_on_single_line
+csharp_style_expression_bodied_accessors.severity = warning
+
+### Use expression body for lambdas (IDE0053)
+csharp_style_expression_bodied_lambdas = when_on_single_line
+csharp_style_expression_bodied_lambdas.severity = warning
+
+### Use expression body for local functions (IDE0061)
+csharp_style_expression_bodied_lambdas = when_on_single_line
+csharp_style_expression_bodied_lambdas.severity = suggestion
