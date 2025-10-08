@@ -30,7 +30,10 @@ class Program
 		foreach (string path in partPaths)
 		{
 			if (first)
+			{
 				writer.WriteLine();
+				writer.WriteLine();
+			}
 			else
 				first = true;
 
