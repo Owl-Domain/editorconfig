@@ -1,0 +1,6 @@
+## .NET code style (field) preferences
+[*.cs]
+
+### Add readonly modifier (IDE0044)
+dotnet_style_readonly_field = true
+dotnet_style_readonly_field.severity = suggestion
