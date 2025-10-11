@@ -1,0 +1,15 @@
+## .NET code style (parenthesis) preferences
+[*.cs]
+
+### Parentheses preferences (IDE0047 and IDE0048)
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_arithmetic_binary_operators.severity = suggestion
+
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_relational_binary_operators.severity = suggestion
+
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity
+dotnet_style_parentheses_in_other_binary_operators.severity = suggestion
+
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary
+dotnet_style_parentheses_in_other_operators.severity = warning
