@@ -1,0 +1,8 @@
+## .NET code style (miscellaneous) preferences
+[*.cs]
+
+### Remove invalid global 'SuppressMessageAttribute' (IDE0076)
+dotnet_diagnostic.IDE0076.severity = warning
+
+### Avoid legacy format target in global 'SuppressMessageAttribute' (IDE0077)
+dotnet_diagnostic.IDE0077.severity = warning
