@@ -1,0 +1,134 @@
+## .NET code style (formatting) preferences
+[*.cs]
+
+### Formatting rule (IDE0055)
+dotnet_diagnostic.IDE0055.severity = warning
+
+#### Using directive options
+dotnet_sort_system_directives_first = true
+dotnet_sort_system_directives_first.severity = warning
+
+dotnet_separate_import_directive_groups = false
+dotnet_separate_import_directive_groups.severity = suggestion
+
+#### Newline options
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_open_brace.severity = warning
+
+csharp_new_line_before_else = true
+csharp_new_line_before_else.severity = warning
+
+csharp_new_line_before_catch = true
+csharp_new_line_before_catch.severity = warning
+
+csharp_new_line_before_finally = true
+csharp_new_line_before_finally.severity = warning
+
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_object_initializers.severity = suggestion
+
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_before_members_in_anonymous_types.severity = suggestion
+
+csharp_new_line_between_query_expression_clauses = true
+csharp_new_line_between_query_expression_clauses.severity = suggestion
+
+#### Indentation options
+csharp_indent_case_contents = true
+csharp_indent_case_contents.severity = warning
+
+csharp_indent_switch_labels = true
+csharp_indent_switch_labels.severity = warning
+
+csharp_indent_labels = no_change
+csharp_indent_labels.severity = warning
+
+csharp_indent_block_contents = true
+csharp_indent_block_contents.severity = warning
+
+csharp_indent_braces = false
+csharp_indent_braces.severity = warning
+
+csharp_indent_case_contents_when_block = false
+csharp_indent_case_contents_when_block.severity = warning
+
+#### Spacing
+csharp_space_after_cast = false
+csharp_space_after_cast.severity = warning
+
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_after_keywords_in_control_flow_statements.severity = warning
+
+csharp_space_between_parentheses = false
+csharp_space_between_parentheses.severity = warning
+
+csharp_space_before_colon_in_inheritance_clause = true
+csharp_space_before_colon_in_inheritance_clause.severity = warning
+
+csharp_space_after_colon_in_inheritance_clause = true
+csharp_space_after_colon_in_inheritance_clause.severity = warning
+
+csharp_space_around_binary_operators = true
+csharp_space_around_binary_operators.severity = warning
+
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_declaration_parameter_list_parentheses.severity = warning
+
+csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
+csharp_space_between_method_declaration_empty_parameter_list_parentheses.severity = warning
+
+csharp_space_between_method_declaration_name_and_open_parenthesis = false
+csharp_space_between_method_declaration_name_and_open_parenthesis.severity = warning
+
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses.severity = warning
+
+csharp_space_between_method_call_empty_parameter_list_parentheses = false
+csharp_space_between_method_call_empty_parameter_list_parentheses.severity = warning
+
+csharp_space_between_method_call_name_and_opening_parenthesis = false
+csharp_space_between_method_call_name_and_opening_parenthesis.severity = warning
+
+csharp_space_after_comma = true
+csharp_space_after_comma.severity = warning
+
+csharp_space_before_comma = false
+csharp_space_before_comma.severity = warning
+
+csharp_space_after_dot = false
+csharp_space_after_dot.severity = warning
+
+csharp_space_before_dot = false
+csharp_space_before_dot.severity = warning
+
+csharp_space_after_semicolon_in_for_statement = true
+csharp_space_after_semicolon_in_for_statement.severity = warning
+
+csharp_space_before_semicolon_in_for_statement = false
+csharp_space_before_semicolon_in_for_statement.severity = warning
+
+csharp_space_around_declaration_statements = false
+csharp_space_around_declaration_statements.severity = warning
+
+csharp_space_before_open_square_brackets = false
+csharp_space_before_open_square_brackets.severity = warning
+
+csharp_space_between_empty_square_brackets = false
+csharp_space_between_empty_square_brackets.severity = warning
+
+csharp_space_between_square_brackets = false
+csharp_space_between_square_brackets.severity = warning
+
+#### Wrap options
+csharp_preserve_single_line_statements = false
+csharp_preserve_single_line_statements.severity = warning
+
+csharp_preserve_single_line_blocks = true
+csharp_preserve_single_line_blocks.severity = warning
+
+## .NET code style (formatting) preferences | global project files
+### Formatting rule (IDE0055)
+#### Using directive options
+[global.*.cs]
+dotnet_separate_import_directive_groups = true
+dotnet_separate_import_directive_groups.severity = warning
