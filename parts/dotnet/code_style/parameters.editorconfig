@@ -1,0 +1,9 @@
+## .NET code style (parameter) preferences
+[*.cs]
+
+### Remove unused parameter (IDE0060)
+dotnet_code_quality_unused_parameters = non_public
+dotnet_code_quality_unused_parameters.severity = warning
+
+### Use 'nameof' (IDE0280)
+dotnet_diagnostic.IDE0280.severity = warning
