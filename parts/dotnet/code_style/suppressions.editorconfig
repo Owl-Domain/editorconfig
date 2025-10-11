@@ -1,0 +1,6 @@
+## .NET code style (suppression) preferences
+[*.cs]
+
+### Remove unnecessary suppression (IDE0079)
+dotnet_remove_unnecessary_suppression_exclusions = none
+dotnet_remove_unnecessary_suppression_exclusions.severity = suggestion
