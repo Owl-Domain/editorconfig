@@ -1,0 +1,26 @@
+## .NET code style (newline) preferences
+[*.cs]
+
+### Avoid multiple blank lines (IDE2000)
+dotnet_style_allow_multiple_blank_lines_experimental = false
+dotnet_style_allow_multiple_blank_lines_experimental.severity = warning
+
+### Blank line required between block and subsequent statement (IDE2003)
+dotnet_style_allow_statement_immediately_after_block_experimental = true
+dotnet_style_allow_statement_immediately_after_block_experimental.severity = warning
+
+### Embedded statements must be on their own line (IDE2001)
+csharp_style_allow_embedded_statements_on_same_line_experimental = false
+csharp_style_allow_embedded_statements_on_same_line_experimental.severity = none
+
+### Consecutive braces must not have blank line between them (IDE2002)
+csharp_style_allow_blank_line_after_colon_in_constructor_initializer_experimental = true
+csharp_style_allow_blank_line_after_colon_in_constructor_initializer_experimental.severity = none
+
+### Blank line not allowed after conditional expression token (IDE2005)
+csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental = true
+csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental.severity = warning
+
+### Blank line not allowed after arrow expression clause token (IDE2006)
+csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = false
+csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental.severity = warning
