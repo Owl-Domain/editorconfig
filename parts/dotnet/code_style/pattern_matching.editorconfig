@@ -1,0 +1,29 @@
+## .NET code style (pattern matching) preferences
+[*.cs]
+
+### Use pattern matching to avoid 'as' followed by a 'null' check (IDE0019)
+csharp_style_pattern_matching_over_as_with_null_check = true
+csharp_style_pattern_matching_over_as_with_null_check.severity = warning
+
+### Use pattern matching to avoid 'is' check followed by a cast (IDE0020 and IDE0038)
+csharp_style_pattern_matching_over_is_with_cast_check = true
+csharp_style_pattern_matching_over_is_with_cast_check.severity = warning
+
+### Use switch expression (IDE0066)
+csharp_style_prefer_switch_expression = true
+csharp_style_prefer_switch_expression.severity = warning
+
+### Use pattern matching (IDE0078 and IDE0260)
+csharp_style_prefer_pattern_matching = true
+csharp_style_prefer_pattern_matching.severity = suggestion
+
+csharp_style_pattern_matching_over_as_with_null_check = true
+csharp_style_pattern_matching_over_as_with_null_check.severity = suggestion
+
+### Use pattern matching (not operator) (IDE0083)
+csharp_style_prefer_not_pattern = true
+csharp_style_prefer_not_pattern.severity = warning
+
+### Simplify property pattern (IDE0170)
+csharp_style_prefer_extended_property_pattern = true
+csharp_style_prefer_extended_property_pattern.severity = warning
