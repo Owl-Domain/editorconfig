@@ -1,0 +1,9 @@
+## .NET code style (keyword) preferences
+[*.cs]
+
+### Use language keywords instead of framework type names for type references (IDE0049)
+dotnet_style_predefined_type_for_locals_parameters_members = true
+dotnet_style_predefined_type_for_locals_parameters_members.severity = warning
+
+dotnet_style_predefined_type_for_member_access = true
+dotnet_style_predefined_type_for_member_access.severity = warning
