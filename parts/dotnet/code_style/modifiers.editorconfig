@@ -1,0 +1,29 @@
+## .NET code style (modifier) preferences
+[*.cs]
+
+### Order modifiers (IDE0036)
+csharp_preferred_modifier_order = public, private, protected, internal, file, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, required, volatile, async
+csharp_preferred_modifier_order.severity = warning
+
+### Add accessibility modifiers (IDE0040)
+dotnet_style_require_accessibility_modifiers = for_non_interface_members
+dotnet_style_require_accessibility_modifiers.severity = warning
+
+### Make local function static (IDE0062)
+csharp_prefer_static_local_function = true
+csharp_prefer_static_local_function.severity = warning
+
+### Make struct fields writable (IDE0064)
+dotnet_diagnostic.IDE0064.severity = error
+
+### Struct can be made 'readonly' (IDE0250)
+csharp_style_prefer_readonly_struct = true
+csharp_style_prefer_readonly_struct.severity = warning
+
+### Member can be made 'readonly' (IDE0251)
+csharp_style_prefer_readonly_struct_member = true
+csharp_style_prefer_readonly_struct_member.severity = warning
+
+### Make anonymous function static (IDE0320)
+csharp_prefer_static_anonymous_function = true
+csharp_prefer_static_anonymous_function.severity = suggestion
