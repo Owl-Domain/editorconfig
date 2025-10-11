@@ -109,3 +109,85 @@ dotnet_diagnostic.IDE0121.severity = warning
 ### Namespace does not match folder structure (IDE0130)
 dotnet_style_namespace_match_folder = true
 dotnet_style_namespace_match_folder.severity = suggestion
+
+### Use throw expression (IDE0016)
+csharp_style_throw_expression = false
+csharp_style_throw_expression.severity = silent
+
+### Inline variable declaration (IDE0018)
+csharp_style_inlined_variable_declaration = true
+csharp_style_inlined_variable_declaration.severity = warning
+
+### Simplify 'default' expression (IDE0034)
+csharp_prefer_simple_default_expression = true
+csharp_prefer_simple_default_expression.severity = warning
+
+### Use local function instead of lambda (IDE0039)
+csharp_style_prefer_local_over_anonymous_function = true
+csharp_style_prefer_local_over_anonymous_function.severity = suggestion
+
+### Deconstruct variable declaration (IDE0042)
+csharp_style_deconstructed_variable_declaration = true
+csharp_style_deconstructed_variable_declaration.severity = silent
+
+### Use index operator (IDE0056)
+csharp_style_prefer_index_operator = true
+csharp_style_prefer_index_operator.severity = warning
+
+### Use range operator (IDE0057)
+csharp_style_prefer_range_operator = true
+csharp_style_prefer_range_operator.severity = warning
+
+### Add missing cases to switch expression (IDE0072)
+dotnet_diagnostic.IDE0072.severity = suggestion
+
+### Remove unnecessary suppression operator (IDE0080)
+dotnet_diagnostic.IDE0080.severity = warning
+
+### Simplify new expression (IDE0090)
+csharp_style_implicit_object_creation_when_type_is_apparent = true
+csharp_style_implicit_object_creation_when_type_is_apparent.severity = warning
+
+### Remove unnecessary discard (IDE0110)
+dotnet_diagnostic.IDE0110.severity = warning
+
+### Prefer 'null' check over type check (IDE0150)
+csharp_style_prefer_null_check_over_type_check = true
+csharp_style_prefer_null_check_over_type_check.severity = warning
+
+### Use tuple to swap values (IDE0180)
+csharp_style_prefer_tuple_swap = true
+csharp_style_prefer_tuple_swap.severity = suggestion
+
+### Add explicit cast in foreach loop (IDE0220)
+dotnet_style_prefer_foreach_explicit_cast_in_source = always
+dotnet_style_prefer_foreach_explicit_cast_in_source.severity = warning
+
+### Use UTF-8 string literal (IDE0230)
+csharp_style_prefer_utf8_string_literals = true
+csharp_style_prefer_utf8_string_literals.severity = suggestion
+
+### Nullable directive is redundant (IDE0240)
+dotnet_diagnostic.IDE0240.severity = suggestion
+
+### Nullable directive is unnecessary (IDE0241)
+dotnet_diagnostic.IDE0241.severity = silent
+
+### Use collection expression for array (IDE0300)
+dotnet_style_prefer_collection_expression = when_types_exactly_match
+dotnet_style_prefer_collection_expression.severity = warning
+
+### Use collection expression for empty (IDE0301)
+dotnet_style_prefer_collection_expression = when_types_exactly_match
+dotnet_style_prefer_collection_expression.severity = warning
+
+### Use collection expression for fluent (IDE0305)
+dotnet_diagnostic.IDE0305.severity = none
+
+### Use unbound generic type (IDE0340)
+csharp_style_prefer_unbound_generic_type_in_nameof = true
+csharp_style_prefer_unbound_generic_type_in_nameof.severity = warning
+
+### Use implicitly typed lambda (IDE0350)
+csharp_style_prefer_implicitly_typed_lambda_expression = true
+csharp_style_prefer_implicitly_typed_lambda_expression.severity = warning
