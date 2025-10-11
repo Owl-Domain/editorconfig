@@ -1,0 +1,6 @@
+## .NET code style (null check) preferences
+[*.cs]
+
+### Use conditional delegate call (IDE1005)
+csharp_style_conditional_delegate_call = true
+csharp_style_conditional_delegate_call.severity = warning
