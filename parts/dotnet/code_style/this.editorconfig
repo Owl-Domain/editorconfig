@@ -1,0 +1,17 @@
+## .NET code style (this.) preferences
+[*.cs]
+
+### this and Me preferences (IDE0003 and IDE0009)
+dotnet_style_qualification_for_field = false
+dotnet_style_qualification_for_field.severity = warning
+
+dotnet_style_qualification_for_property = false
+dotnet_style_qualification_for_property.severity = warning
+
+dotnet_style_qualification_for_method = false
+dotnet_style_qualification_for_method.severity = warning
+
+dotnet_style_qualification_for_event = false
+dotnet_style_qualification_for_event.severity = warning
+
+dotnet_diagnostic.IDE0003.severity = warning
