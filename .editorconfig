@@ -1059,6 +1059,11 @@ dotnet_diagnostic.IDE0005.severity = warning
 csharp_using_directive_placement = outside_namespace
 csharp_using_directive_placement.severity = warning
 
+## .NET code style (using directive) preferences
+### Remove unnecessary using directives
+[global.{Common,Test}.cs]
+dotnet_diagnostic.IDE0005.severity = none
+
 
 ## .NET code style (var) preferences | source: dotnet/code_style/var.editorconfig
 [*.cs]
