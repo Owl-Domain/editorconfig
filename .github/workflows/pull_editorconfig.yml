@@ -6,7 +6,11 @@ permissions:
 
 on:
   workflow_call: # Required for reusable workflows.
-  workflow_dispatch: # Allow manual runs
+    inputs:
+      base:
+        description: "The base branch to pull request to."
+        type: string
+        default: ${{ github.event.repository.default_branch }}
 
 jobs:
   pull_editorconfig:
@@ -45,6 +49,7 @@ jobs:
           sign-commits: true
 
           branch: automatic-editorconfig-update
+          base: ${{ inputs.base }}
           title: "[Auto] Update the .editorconfig file to the latest version."
           body: "This PR updates the `.editorconfig` file to the latest version from the [OwlDomain/editorconfig](https://github.com/Owl-Domain/editorconfig) repository."
           reviewers: nightowl286
