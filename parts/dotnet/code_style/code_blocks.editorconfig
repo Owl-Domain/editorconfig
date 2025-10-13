@@ -22,7 +22,7 @@ csharp_style_prefer_top_level_statements = false
 csharp_style_prefer_top_level_statements.severity = warning
 
 ### Use primary constructor (IDE0290)
-csharp_style_prefer_primary_constructors = true
+csharp_style_prefer_primary_constructors = false
 csharp_style_prefer_primary_constructors.severity = warning
 
 ### Prefer 'System.Threading.Lock' (IDE0330)
