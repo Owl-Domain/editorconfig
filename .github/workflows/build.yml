@@ -65,6 +65,7 @@ jobs:
           sign-commits: true
 
           branch: automatic-editorconfig-update
+          base: develop
           title: "[Auto] Update the generated .editorconfig file."
           body: "This PR updates the `.editorconfig` file generated through the [build](https://github.com/Owl-Domain/editorconfig/actions/workflows/build.yml) Github action workflow."
           reviewers: nightowl286
