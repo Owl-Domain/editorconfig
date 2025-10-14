@@ -98,7 +98,7 @@ dotnet_style_prefer_simplified_boolean_expressions.severity = warning
 dotnet_diagnostic.IDE0082.severity = warning
 
 ### Remove unnecessary equality operator (IDE0100)
-dotnet_diagnostic.IDE0100.severity = suggestion
+dotnet_diagnostic.IDE0100.severity = none
 
 ### Simplify LINQ expression (IDE0120)
 dotnet_diagnostic.IDE0120.severity = warning
