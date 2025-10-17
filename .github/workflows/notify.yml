@@ -26,7 +26,7 @@ jobs:
           Sain,
           Media,
           Console,
-          # CommandLine, # No longer needs to be updated, project is almost archived.
+          Markdown,
 
           Owldoc
         ]
