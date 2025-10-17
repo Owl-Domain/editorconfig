@@ -132,3 +132,10 @@ csharp_preserve_single_line_blocks.severity = warning
 [global.*.cs]
 dotnet_separate_import_directive_groups = true
 dotnet_separate_import_directive_groups.severity = warning
+
+## .NET code style (formatting) preferences | global project files
+### Formatting rule (IDE0055)
+#### Using directive options
+[global.Test.cs]
+dotnet_separate_import_directive_groups = false
+dotnet_separate_import_directive_groups.severity = suggestion
